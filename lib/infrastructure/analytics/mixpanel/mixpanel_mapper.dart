@@ -1,4 +1,5 @@
-import 'package:flutter_application/core/observability/analytics/analytics_event.dart';
+
+import 'package:demo_mix_panel/core/observability/analytics/analytics_event.dart';
 
 class MixpanelMapper {
   static Map<String, dynamic> toProperties(AnalyticsEvent event) {
