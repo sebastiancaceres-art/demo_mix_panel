@@ -1,7 +1,7 @@
-import 'package:demo_mix_panel/app/core/observability/analytics_event.dart';
-import 'package:demo_mix_panel/app/core/observability/analytics_service.dart';
+import 'package:demo_mix_panel/app/core/observability/analytics/analytics_event.dart';
+import 'package:demo_mix_panel/app/core/observability/analytics/analytics_service.dart';
 
-class NoopAnalyticsService implements AnalyticsService {
+class ExampleAnalyticsService implements AnalyticsService {
   @override
   Future<void> init() async {}
 

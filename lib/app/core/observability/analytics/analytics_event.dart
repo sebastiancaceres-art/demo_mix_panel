@@ -1,4 +1,4 @@
-import 'package:demo_mix_panel/app/core/observability/analytics_context.dart';
+import 'package:demo_mix_panel/app/core/observability/analytics/analytics_context.dart';
 
 abstract class AnalyticsEvent {
   String get name;

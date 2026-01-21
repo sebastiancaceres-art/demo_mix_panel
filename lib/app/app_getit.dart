@@ -1,5 +1,6 @@
 import 'package:demo_mix_panel/app/app_config.dart';
-import 'package:demo_mix_panel/app/core/observability/analytics_service.dart';
+import 'package:demo_mix_panel/app/core/observability/analytics/analytics_service.dart';
+import 'package:demo_mix_panel/app/core/observability/analytics/example_analytics_service.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
@@ -9,7 +10,7 @@ void registerAppDependencies() {
   getIt.registerLazySingleton<AnalyticsService>(
     () => AppConfig.enableAnalytics
         ? MixpanelAnalyticsService()
-        : NoopAnalyticsService(),
+        : ExampleAnalyticsService(),
   );
 
   // Errors

@@ -1,4 +1,4 @@
-import 'package:demo_mix_panel/app/core/observability/analytics_event.dart';
+import 'package:demo_mix_panel/app/core/observability/analytics/analytics_event.dart';
 
 abstract interface class AnalyticsService {
   Future<void> init();
