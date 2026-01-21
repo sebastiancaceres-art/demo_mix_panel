@@ -6,6 +6,7 @@ import 'package:demo_mix_panel/core/observability/errors/example_error_reporter.
 import 'package:demo_mix_panel/core/observability/observability.dart';
 import 'package:demo_mix_panel/core/observability/performance/example_performance_tracker.dart';
 import 'package:demo_mix_panel/core/observability/performance/performance_tracker.dart';
+import 'package:demo_mix_panel/features/checkout/blocs/checkout_bloc.dart';
 import 'package:demo_mix_panel/infrastructure/analytics/mixpanel/mixpanel_analytics_service.dart';
 import 'package:get_it/get_it.dart';
 
@@ -35,4 +36,11 @@ void registerAppDependencies() {
       performance: getIt(),
     ),
   );
+
+  //bloc
+  getIt.registerFactory<CheckoutBloc>(
+  () => CheckoutBloc(
+    getIt<Observability>(),
+  ),
+);
 }

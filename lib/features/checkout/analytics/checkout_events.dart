@@ -7,11 +7,24 @@ class CheckoutStartedEvent extends AnalyticsEvent {
 
   @override
   AnalyticsContext get context => const AnalyticsContext(
-    screen: 'checkout',
-    flow: 'purchase',
-    feature: 'payments',
-  );
+        screen: 'checkout',
+        feature: 'payments',
+      );
 
   @override
-  Map<String, dynamic> get properties => {'source': 'cart'};
+  Map<String, dynamic> get properties => {};
+}
+
+class CheckoutCompletedEvent extends AnalyticsEvent {
+  @override
+  String get name => 'checkout_completed';
+
+  @override
+  AnalyticsContext get context => const AnalyticsContext(
+        screen: 'checkout',
+        feature: 'payments',
+      );
+
+  @override
+  Map<String, dynamic> get properties => {};
 }
